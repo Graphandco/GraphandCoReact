@@ -1,10 +1,24 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './styles/main.scss';
+import Header from './components/Header';
+import Home from './components/Home';
+import About from './components/About';
 
 const App = () => {
     return (
         <>
-            <h1>Hello world !</h1>
+            <BrowserRouter>
+                <Header />
+                <Switch>
+                    <Route path='/' exact>
+                        <Home />
+                    </Route>
+                    <Route path='/about'>
+                        <About />
+                    </Route>
+                </Switch>
+            </BrowserRouter>
         </>
     );
 };
