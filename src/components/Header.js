@@ -5,9 +5,16 @@ const Header = () => {
     return (
         <>
             <header>
-                <p>
-                    <Link to='/'>Home</Link> |<Link to='/about'>A propos</Link>|
-                </p>
+                <nav>
+                    <ul className='links'>
+                        <li>
+                            <Link to='/'>Home</Link>
+                        </li>
+                        <li>
+                            <Link to='/about'>A propos</Link>
+                        </li>
+                    </ul>
+                </nav>
             </header>
         </>
     );
