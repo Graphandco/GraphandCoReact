@@ -4,33 +4,34 @@ import Tip from './Tip';
 import Axios from 'axios';
 
 const Tips = () => {
-    const [posts, setPosts] = useState([]);
+    const [tips, setTips] = useState([]);
 
     useEffect(() => {
-        async function recuperePosts() {
+        async function recupereTips() {
             try {
                 const response = await Axios.get(
-                    'http://localhost:8080/subscribers'
+                    'http://localhost:8080/coding-tips'
                 );
                 console.log(response.data);
-                setPosts(response.data);
+                setTips(response.data);
             } catch (e) {
                 console.log('Une erreur est survenue');
             }
         }
-        recuperePosts();
+        recupereTips();
     }, []);
 
     return (
         <Page title='Accueil'>
             <h1>Tips</h1>
             <div className='tips-list'>
-                {posts.map((post) => {
+                {tips.map((tip) => {
                     return (
                         <Tip
-                            key={post._id}
-                            name={post.name}
-                            desc={post.subscribedToChannel}
+                            key={tip._id}
+                            name={tip.name}
+                            language={tip.language}
+                            content={tip.tipContent}
                         ></Tip>
                     );
                 })}
