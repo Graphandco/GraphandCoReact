@@ -44,7 +44,7 @@ function CreateTip(props) {
                     label='Nom'
                     autoFocus
                     type='text'
-                    fullWidth='true'
+                    fullWidth={true}
                 />
             </div>
 
@@ -54,7 +54,7 @@ function CreateTip(props) {
                     label='Description'
                     type='text'
                     autoComplete='off'
-                    fullWidth='true'
+                    fullWidth={true}
                 />
             </div>
 
@@ -64,7 +64,7 @@ function CreateTip(props) {
                     label='Langage'
                     type='text'
                     autoComplete='off'
-                    fullWidth='true'
+                    fullWidth={true}
                 />
             </div>
 
@@ -74,7 +74,7 @@ function CreateTip(props) {
                     label='Code du Tip'
                     multiline
                     variant='outlined'
-                    fullWidth='true'
+                    fullWidth={true}
                     rows='5'
                     name='body'
                     type='text'

@@ -9,9 +9,27 @@ import TipSingle from './components/TipSingle';
 import CreateTip from './components/CreateTip';
 import About from './components/About';
 
+//Material UI
+import {
+    createMuiTheme,
+    ThemeProvider,
+    useTheme,
+} from '@material-ui/core/styles';
+
 const App = () => {
+    //Set Material Theme
+    const themes = useTheme();
+    const monTheme = createMuiTheme({
+        palette: {
+            type: 'dark',
+            secondary: {
+                main: '#FFFFFF',
+            },
+        },
+    });
+
     return (
-        <>
+        <ThemeProvider theme={monTheme}>
             <BrowserRouter>
                 <Header />
                 <Switch>
@@ -32,7 +50,7 @@ const App = () => {
                     </Route>
                 </Switch>
             </BrowserRouter>
-        </>
+        </ThemeProvider>
     );
 };
 

@@ -41,7 +41,7 @@ const Tips = () => {
     return (
         <Page title='Coding Tips'>
             <h1>Tips</h1>
-            <CreateTip />
+
             <div className='tips-list'>
                 {tips.map((tip) => (
                     <div
@@ -69,6 +69,7 @@ const Tips = () => {
                     </div>
                 ))}
             </div>
+            <CreateTip />
         </Page>
     );
 };
