@@ -5,7 +5,7 @@ const Page = (props) => {
         document.title = `${props.title} | Graph and Co`;
         window.scrollTo(0, 0);
     });
-    return <>{props.children}</>;
+    return <main>{props.children}</main>;
 };
 
 export default Page;

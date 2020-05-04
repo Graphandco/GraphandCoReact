@@ -5,7 +5,7 @@ import Axios from 'axios';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-function CreatePost(props) {
+function CreateTip(props) {
     const [wasSuccessful, setWasSuccessful] = useState();
     const [name, setName] = useState();
     const [desc, setDesc] = useState();
@@ -37,41 +37,57 @@ function CreatePost(props) {
     }
 
     return (
-        <form onSubmit={handleTipSubmit}>
-            <TextField
-                onChange={(e) => setName(e.target.value)}
-                label='Nom'
-                autoFocus
-                type='text'
-            />
+        <form className='tips-form' onSubmit={handleTipSubmit}>
+            <div className='tips-form__item name'>
+                <TextField
+                    onChange={(e) => setName(e.target.value)}
+                    label='Nom'
+                    autoFocus
+                    type='text'
+                    fullWidth='true'
+                />
+            </div>
 
-            <TextField
-                onChange={(e) => setDesc(e.target.value)}
-                label='Description'
-                type='text'
-                autoComplete='off'
-            />
+            <div className='tips-form__item desc'>
+                <TextField
+                    onChange={(e) => setDesc(e.target.value)}
+                    label='Description'
+                    type='text'
+                    autoComplete='off'
+                    fullWidth='true'
+                />
+            </div>
 
-            <TextField
-                onChange={(e) => setLanguage(e.target.value)}
-                label='Langage'
-                type='text'
-                autoComplete='off'
-            />
+            <div className='tips-form__item language'>
+                <TextField
+                    onChange={(e) => setLanguage(e.target.value)}
+                    label='Langage'
+                    type='text'
+                    autoComplete='off'
+                    fullWidth='true'
+                />
+            </div>
 
-            <TextField
-                onChange={(e) => setContent(e.target.value)}
-                label='Code du Tip'
-                multiline
-                name='body'
-                type='text'
-            />
+            <div className='tips-form__item content'>
+                <TextField
+                    onChange={(e) => setContent(e.target.value)}
+                    label='Code du Tip'
+                    multiline
+                    variant='outlined'
+                    fullWidth='true'
+                    rows='5'
+                    name='body'
+                    type='text'
+                />
+            </div>
 
-            <Button type='submit' variant='contained'>
-                Ajouter le Tip
-            </Button>
+            <div className='tips-form__item button'>
+                <Button type='submit' variant='contained'>
+                    Ajouter le Tip
+                </Button>
+            </div>
         </form>
     );
 }
 
-export default CreatePost;
+export default CreateTip;

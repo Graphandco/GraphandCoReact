@@ -4,10 +4,20 @@ import Page from './Page';
 import CreateTip from './CreateTip';
 import Axios from 'axios';
 
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import IconButton from '@material-ui/core/IconButton';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+// import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+// import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import DeleteIcon from '@material-ui/icons/Delete';
+let random = Math.floor(Math.random() * Math.floor(999999));
+let randomPicsum =
+    `url(https://picsum.photos/900/200/?${random}&rnd` + random + ')';
+
+let PicsumStyle = {
+    backgroundImage: randomPicsum,
+};
+
+console.log(PicsumStyle);
 
 const Tips = () => {
     const [tips, setTips] = useState([]);
@@ -34,19 +44,28 @@ const Tips = () => {
             <CreateTip />
             <div className='tips-list'>
                 {tips.map((tip) => (
-                    <div key={tip._id} className='tip-single'>
+                    <div
+                        key={tip._id}
+                        className='tip-single'
+                        id={tip._id}
+                        //style={PicsumStyle}
+                    >
                         <Link to={`/tips/${tip._id}`}>
-                            <h3 className='title'>{tip.name}</h3>
+                            <span className='tip-title'>{tip.name}</span>
                         </Link>
 
-                        <span>{tip.desc}</span>
-                        <SyntaxHighlighter
+                        <span className='tip-desc'>{tip.desc}</span>
+                        {/* <SyntaxHighlighter
                             style={atomDark}
                             language={tip.language}
                         >
                             {tip.content}
-                        </SyntaxHighlighter>
-                        <DeleteIcon />
+                        </SyntaxHighlighter> */}
+                        <Link to={`/tips/${tip._id}`}>
+                            <IconButton aria-label='read-more'>
+                                <ArrowForwardIosIcon />
+                            </IconButton>
+                        </Link>
                     </div>
                 ))}
             </div>
