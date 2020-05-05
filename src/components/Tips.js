@@ -6,18 +6,14 @@ import Axios from 'axios';
 
 import IconButton from '@material-ui/core/IconButton';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-// import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-// import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-let random = Math.floor(Math.random() * Math.floor(999999));
-let randomPicsum =
-    `url(https://picsum.photos/900/200/?${random}&rnd` + random + ')';
-
-let PicsumStyle = {
-    backgroundImage: randomPicsum,
-};
-
-console.log(PicsumStyle);
+//Add picsum BG to cards
+// let random = Math.floor(Math.random() * Math.floor(999999));
+// let randomPicsum =
+//     `url(https://picsum.photos/900/200/?${random}&rnd` + random + ')';
+// let PicsumStyle = {
+//     backgroundImage: randomPicsum,
+// };
 
 const Tips = () => {
     const [tips, setTips] = useState([]);
@@ -55,12 +51,7 @@ const Tips = () => {
                         </Link>
 
                         <span className='tip-desc'>{tip.desc}</span>
-                        {/* <SyntaxHighlighter
-                            style={atomDark}
-                            language={tip.language}
-                        >
-                            {tip.content}
-                        </SyntaxHighlighter> */}
+
                         <Link to={`/tips/${tip._id}`}>
                             <IconButton aria-label='read-more'>
                                 <ArrowForwardIosIcon />

@@ -13,12 +13,12 @@ import About from './components/About';
 import {
     createMuiTheme,
     ThemeProvider,
-    useTheme,
+    //useTheme,
 } from '@material-ui/core/styles';
 
 const App = () => {
     //Set Material Theme
-    const themes = useTheme();
+    //const themes = useTheme();
     const monTheme = createMuiTheme({
         palette: {
             type: 'dark',

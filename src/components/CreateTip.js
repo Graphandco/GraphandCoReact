@@ -32,8 +32,6 @@ function CreateTip(props) {
     };
 
     if (wasSuccessful) {
-        //return <Redirect to={`/post/${wasSuccessful}`} />;
-        //return <p>Bravo !</p>;
     }
 
     return (

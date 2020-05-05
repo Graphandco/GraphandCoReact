@@ -37,7 +37,7 @@ const TipSingle = () => {
                     const response = await Axios.delete(
                         `http://localhost:8080/coding-tips/${id}`
                     );
-                    if (response.data.message === 'Deleted Coding Tip') {
+                    if (response.data.message === 'Tip removed') {
                         setDeleteWasSuccessful(true);
                         console.log(response);
                     }
