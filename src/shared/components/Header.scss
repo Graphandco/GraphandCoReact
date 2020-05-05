@@ -1,0 +1,22 @@
+@import '../styles/variables';
+
+header {
+    nav {
+        background-color: $primary;
+        color: white;
+
+        ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+
+            li {
+                padding: 1rem;
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

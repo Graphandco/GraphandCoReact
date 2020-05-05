@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 import { useParams } from 'react-router';
-import Page from './Page';
+import Page from '../../shared/components/Page';
 import Axios from 'axios';
+
+import './TipSingle.scss';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';

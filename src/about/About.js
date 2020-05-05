@@ -1,5 +1,7 @@
 import React from 'react';
-import Page from './Page';
+import Page from '../shared/components/Page';
+
+import './About.scss';
 
 const About = () => {
     return (

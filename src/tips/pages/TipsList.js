@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Page from './Page';
-import CreateTip from './CreateTip';
+import Page from '../../shared/components/Page';
+import CreateTip from '../components/CreateTip';
 import Axios from 'axios';
+
+import './TipsList.scss';
 
 import IconButton from '@material-ui/core/IconButton';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';

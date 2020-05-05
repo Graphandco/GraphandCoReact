@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import './styles/reset.css';
-import './styles/main.scss';
-import Header from './components/Header';
-import Home from './components/Home';
-import Tips from './components/Tips';
-import TipSingle from './components/TipSingle';
-import CreateTip from './components/CreateTip';
-import About from './components/About';
+import './shared/styles/reset.css';
+import './shared/styles/main.scss';
+import Header from './shared/components/Header';
+import Home from './home/Home';
+import Tips from './tips/pages/TipsList';
+import TipSingle from './tips/pages/TipSingle';
+import CreateTip from './tips/components/CreateTip';
+import About from './about/About';
 
 //Material UI
 import {
