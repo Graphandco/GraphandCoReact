@@ -21,6 +21,7 @@ import Button from '@material-ui/core/Button';
 const Tips = () => {
     const [tips, setTips] = useState([]);
 
+    //FORM STATE
     const [name, setName] = useState();
     const [desc, setDesc] = useState();
     const [language, setLanguage] = useState();
