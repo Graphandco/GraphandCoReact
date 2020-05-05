@@ -6,7 +6,7 @@ import Header from './shared/components/Header';
 import Home from './home/Home';
 import Tips from './tips/pages/TipsList';
 import TipSingle from './tips/pages/TipSingle';
-import CreateTip from './tips/components/CreateTip';
+//import CreateTip from './tips/components/CreateTip';
 import About from './about/About';
 
 //Material UI
@@ -41,9 +41,6 @@ const App = () => {
                     </Route>
                     <Route path='/tips/:id'>
                         <TipSingle />
-                    </Route>
-                    <Route path='/create-tip'>
-                        <CreateTip />
                     </Route>
                     <Route path='/about'>
                         <About />
