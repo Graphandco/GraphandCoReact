@@ -1,0 +1,24 @@
+@import '../../shared/styles/variables';
+
+.tip-card {
+    background-color: $primary;
+    color: $lightgrey;
+    border-radius: 3px;
+    padding: 1rem 1rem 0.5rem 1rem;
+
+    .tip-title {
+        display: block;
+        color: white;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .tip-desc {
+        display: block;
+    }
+
+    .tip-controls {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}

@@ -25,6 +25,9 @@ const App = () => {
             secondary: {
                 main: '#FFFFFF',
             },
+            alert: {
+                main: '#ff0000',
+            },
         },
     });
 

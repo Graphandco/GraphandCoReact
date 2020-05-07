@@ -21,7 +21,7 @@ import Button from '@material-ui/core/Button';
 const Tips = () => {
     const [tips, setTips] = useState([]);
 
-    //FORM STATE
+    //FORM STATES
     const [name, setName] = useState();
     const [desc, setDesc] = useState();
     const [language, setLanguage] = useState();
@@ -38,11 +38,13 @@ const Tips = () => {
                 response.data.reverse();
                 setTips(response.data);
             } catch (e) {
-                console.log('Une erreur est survenue');
+                console.log(
+                    'Une erreur est survenue lors de la récupération des Tips'
+                );
             }
         };
         handleTipListing();
-    }, []);
+    }, [tips.length]);
 
     //ADDING A TIP
     const handleTipSubmit = async (e) => {
@@ -58,7 +60,7 @@ const Tips = () => {
                 }
             );
             //setWasSuccessful(response.data);
-            console.log(response);
+            //console.log(response);
 
             setTips((previous) =>
                 previous
@@ -72,7 +74,7 @@ const Tips = () => {
             );
             window.scrollTo(0, 0);
         } catch (e) {
-            console.log('Il y a eu un problème');
+            console.log("Une erreur est survenue lors de l'ajout d'un Tip");
         }
     };
 
@@ -145,7 +147,7 @@ const Tips = () => {
                 </div>
 
                 <div className='tips-form__item button'>
-                    <Button type='submit' variant='contained'>
+                    <Button type='submit' variant='outlined'>
                         Ajouter le Tip
                     </Button>
                 </div>
